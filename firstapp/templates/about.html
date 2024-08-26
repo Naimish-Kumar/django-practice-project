@@ -3,111 +3,230 @@
 {% block title %}About Us{% endblock %}
 
 {% block content %}
-    <div class="container">
-      <main class="about-us">
-          <h1 class="about-title">About Us</h1>
-          <section class="about-section">
-              <h2 class="section-title">Our Story</h2>
-              <p class="section-content">We are a passionate team dedicated to creating innovative solutions for our customers. Founded in 2010, we've grown from a small startup to a leading company in our industry, always putting our clients first.</p>
-          </section>
-          <section class="about-section">
-              <h2 class="section-title">Our Mission</h2>
-              <p class="section-content">Our mission is to provide high-quality products and services that exceed our customers' expectations. We strive to create value through innovation, integrity, and excellence in everything we do.</p>
-          </section>
-          <section class="about-section">
-              <h2 class="section-title">Our Values</h2>
-              <ul class="values-list">
-                  <li>Innovation: We embrace creativity and constantly seek new ways to improve.</li>
-                  <li>Integrity: We conduct our business with honesty and transparency.</li>
-                  <li>Excellence: We aim for the highest standards in all our endeavors.</li>
-                  <li>Customer-Centric: Our customers' success is our success.</li>
-              </ul>
-          </section>
-          <section class="about-section">
-              <h2 class="section-title">Our Team</h2>
-              <div class="team-grid">
-                  <div class="team-member">
-                      <img src="/static/images/john-doe.jpg" alt="John Doe" class="member-image">
-                      <h3>John Doe</h3>
-                      <p>CEO</p>
-                  </div>
-                  <div class="team-member">
-                      <img src="/static/images/jane-smith.jpg" alt="Jane Smith" class="member-image">
-                      <h3>Jane Smith</h3>
-                      <p>CTO</p>
-                  </div>
-                  <div class="team-member">
-                      <img src="/static/images/mike-johnson.jpg" alt="Mike Johnson" class="member-image">
-                      <h3>Mike Johnson</h3>
-                      <p>Lead Developer</p>
-                  </div>
-                  <div class="team-member">
-                      <img src="/static/images/sarah-lee.jpg" alt="Sarah Lee" class="member-image">
-                      <h3>Sarah Lee</h3>
-                      <p>Head of Design</p>
-                  </div>
-              </div>
-          </section>
-          <section class="about-section">
-              <h2 class="section-title">Join Our Team</h2>
-              <p class="section-content">We're always looking for talented individuals to join our growing team. Check out our <a href="/careers" class="career-link">careers page</a> for current openings.</p>
-          </section>
-      </main>      </main>
-    </div>
+{% load static %}
+      <div class="container">
+        <main class="about-us">
+            <h1 class="about-title gradient-text text-center"><i class="fas fa-users"></i> About Us</h1>
+            <section class="about-section animate-on-scroll text-center">
+                <h2 class="section-title"><i class="fas fa-book-open"></i> Our Story</h2>
+                <p class="section-content">We are a passionate team dedicated to creating innovative solutions for our customers. Founded in 2010, we've grown from a small startup to a leading company in our industry, always putting our clients first. Our journey has been marked by continuous growth, learning, and adaptation to the ever-changing technological landscape.</p>
+            </section>
+            <section class="about-section animate-on-scroll text-center">
+                <h2 class="section-title"><i class="fas fa-bullseye"></i> Our Mission</h2>
+                <p class="section-content">Our mission is to provide high-quality products and services that exceed our customers' expectations. We strive to create value through innovation, integrity, and excellence in everything we do. By fostering a culture of continuous improvement and collaboration, we aim to make a positive impact on businesses and communities worldwide.</p>
+            </section>
+            <section class="about-section animate-on-scroll text-center">
+                <h2 class="section-title"><i class="fas fa-heart"></i> Our Values</h2>
+                <ul class="values-list">
+                    <li><i class="fas fa-lightbulb"></i> Innovation: We embrace creativity and constantly seek new ways to improve, pushing the boundaries of what's possible in our field.</li>
+                    <li><i class="fas fa-handshake"></i> Integrity: We conduct our business with honesty and transparency, building trust with our clients, partners, and employees.</li>
+                    <li><i class="fas fa-trophy"></i> Excellence: We aim for the highest standards in all our endeavors, continuously refining our skills and processes to deliver outstanding results.</li>
+                    <li><i class="fas fa-user-check"></i> Customer-Centric: Our customers' success is our success. We prioritize their needs and work tirelessly to ensure their satisfaction and growth.</li>
+                    <li><i class="fas fa-users"></i> Collaboration: We believe in the power of teamwork and foster an inclusive environment where diverse ideas and perspectives are valued.</li>
+                </ul>
+            </section>
+            
+            <section class="about-section animate-on-scroll text-center">
+                <h2 class="section-title"><i class="fas fa-user-tie"></i> Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member shadow-box">
+                        <div class="member-image-container">
+                            <img src="{% static 'images/jhon-doe.jpg' %}" alt="John Doe" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3>John Doe</h3>
+                            <p class="member-title">CEO</p>
+                            <p class="member-description">With over 20 years of industry experience, John leads our company with vision and passion. He's committed to fostering innovation and driving sustainable growth.</p>
+                        </div>
+                    </div>
+                    <div class="team-member shadow-box">
+                        <div class="member-image-container">
+                            <img src="{% static 'images/jane-smith.jpg' %}" alt="Jane Smith" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3>Jane Smith</h3>
+                            <p class="member-title">CTO</p>
+                            <p class="member-description">Jane is the technological backbone of our company. Her expertise in cutting-edge technologies ensures we stay ahead of the curve in our product development.</p>
+                        </div>
+                    </div>
+                    <div class="team-member shadow-box">
+                        <div class="member-image-container">
+                            <img src="{% static 'images/mike-johnsin.jpg' %}" alt="Mike Johnson" class="member-image">
+                        </div>
+                        <div class="member-info">
+                            <h3>Mike Johnson</h3>
+                            <p class="member-title">Lead Developer</p>
+                            <p class="member-description">Mike's coding prowess and problem-solving skills are unmatched. He leads our development team in creating robust and scalable solutions for our clients.</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </section>
+            <section class="about-section animate-on-scroll text-center">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> Join Our Team</h2>
+                <p class="section-content">We're always looking for talented individuals to join our growing team. If you're passionate about technology, innovation, and making a difference, we want to hear from you. Check out our <a href="/careers" class="career-link">careers page</a> for current openings and opportunities to be part of our exciting journey.</p>
+            </section>
+        </main>
+      </div>
 
-    <style>
-      .gradient-text {
-        background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        animation: gradient-animation 5s ease infinite;
-      }
-
-      .shadow-box {
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-      }
-
-      .shadow-box:hover {
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      }
-
-      .animate-on-scroll {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
-
-      .animate-on-scroll.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      @keyframes gradient-animation {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-    </style>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
-
-        function checkVisibility() {
-          animatedElements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
-            if (rect.top <= windowHeight * 0.75) {
-              element.classList.add('visible');
-            }
-          });
+      <style>
+        .gradient-text {
+          background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+          animation: gradient-animation 5s ease infinite;
         }
 
-        window.addEventListener('scroll', checkVisibility);
-        checkVisibility();
-      });
-    </script>
+        .shadow-box {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+          border-radius: 15px;
+          overflow: hidden;
+        }
+
+        .shadow-box:hover {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          transform: translateY(-5px);
+        }
+
+        .animate-on-scroll {
+          opacity: 0;
+          transform: translateY(20px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .animate-on-scroll.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        @keyframes gradient-animation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        .team-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+        }
+
+        .team-member {
+          background-color: #fff;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
+
+        .member-image-container {
+          width: 100%;
+          height: 250px;
+          overflow: hidden;
+        }
+
+        .member-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .member-image {
+          transform: scale(1.05);
+        }
+
+        .member-info {
+          padding: 20px;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .member-info h3 {
+          margin: 0;
+          font-size: 1.4em;
+          color: #333;
+        }
+
+        .member-title {
+          margin: 5px 0;
+          font-size: 1.1em;
+          color: #4ecdc4;
+          font-weight: bold;
+        }
+
+        .member-description {
+          margin: 10px 0 0;
+          font-size: 0.9em;
+          color: #666;
+          flex-grow: 1;
+        }
+
+        .text-center {
+          text-align: center;
+        }
+
+        .section-title {
+          font-size: 2em;
+          margin-bottom: 20px;
+          color: #333;
+        }
+
+        .section-content {
+          font-size: 1.1em;
+          line-height: 1.6;
+          color: #555;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .values-list {
+          list-style-type: none;
+          padding: 0;
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .values-list li {
+          margin-bottom: 15px;
+          font-size: 1.1em;
+          color: #555;
+        }
+
+        .values-list li i {
+          margin-right: 10px;
+          color: #4ecdc4;
+        }
+
+        .about-title {
+          font-size: 3em;
+          margin-bottom: 30px;
+        }
+
+        .about-section {
+          margin-bottom: 50px;
+        }
+      </style>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+          function checkVisibility() {
+            animatedElements.forEach(element => {
+              const rect = element.getBoundingClientRect();
+              const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+              if (rect.top <= windowHeight * 0.75) {
+                element.classList.add('visible');
+              }
+            });
+          }
+
+          window.addEventListener('scroll', checkVisibility);
+          checkVisibility();
+        });
+      </script>
 {% endblock %}
