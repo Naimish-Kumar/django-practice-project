@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <main class="about-us">
+          <h1 class="about-title">About Us</h1>
+          <section class="about-section">
+              <h2 class="section-title">Our Story</h2>
+              <p class="section-content">We are a passionate team dedicated to creating innovative solutions for our customers. Founded in 2010, we've grown from a small startup to a leading company in our industry, always putting our clients first.</p>
+          </section>
+          <section class="about-section">
+              <h2 class="section-title">Our Mission</h2>
+              <p class="section-content">Our mission is to provide high-quality products and services that exceed our customers' expectations. We strive to create value through innovation, integrity, and excellence in everything we do.</p>
+          </section>
+          <section class="about-section">
+              <h2 class="section-title">Our Values</h2>
+              <ul class="values-list">
+                  <li>Innovation: We embrace creativity and constantly seek new ways to improve.</li>
+                  <li>Integrity: We conduct our business with honesty and transparency.</li>
+                  <li>Excellence: We aim for the highest standards in all our endeavors.</li>
+                  <li>Customer-Centric: Our customers' success is our success.</li>
+              </ul>
+          </section>
+          <section class="about-section">
+              <h2 class="section-title">Our Team</h2>
+              <div class="team-grid">
+                  <div class="team-member">
+                      <img src="/static/images/john-doe.jpg" alt="John Doe" class="member-image">
+                      <h3>John Doe</h3>
+                      <p>CEO</p>
+                  </div>
+                  <div class="team-member">
+                      <img src="/static/images/jane-smith.jpg" alt="Jane Smith" class="member-image">
+                      <h3>Jane Smith</h3>
+                      <p>CTO</p>
+                  </div>
+                  <div class="team-member">
+                      <img src="/static/images/mike-johnson.jpg" alt="Mike Johnson" class="member-image">
+                      <h3>Mike Johnson</h3>
+                      <p>Lead Developer</p>
+                  </div>
+                  <div class="team-member">
+                      <img src="/static/images/sarah-lee.jpg" alt="Sarah Lee" class="member-image">
+                      <h3>Sarah Lee</h3>
+                      <p>Head of Design</p>
+                  </div>
+              </div>
+          </section>
+          <section class="about-section">
+              <h2 class="section-title">Join Our Team</h2>
+              <p class="section-content">We're always looking for talented individuals to join our growing team. Check out our <a href="/careers" class="career-link">careers page</a> for current openings.</p>
+          </section>
+      </main>      </main>
+    </div>
+
+    <style>
+      .gradient-text {
+        background-image: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: gradient-animation 5s ease infinite;
+      }
+
+      .shadow-box {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      }
+
+      .shadow-box:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        function checkVisibility() {
+          animatedElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top <= windowHeight * 0.75) {
+              element.classList.add('visible');
+            }
+          });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility();
+      });
+    </script>
+{% endblock %}

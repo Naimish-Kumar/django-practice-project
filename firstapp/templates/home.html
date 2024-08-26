@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Our Stylish Homepage{% endblock %}
+
+{% block content %}
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .gradient-shadow {
+        box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3), 0 6px 6px rgba(0, 123, 255, 0.2);
+        transition: all 0.3s ease;
+    }
+    .gradient-shadow:hover {
+        box-shadow: 0 15px 30px rgba(0, 123, 255, 0.4), 0 10px 10px rgba(0, 123, 255, 0.3);
+        transform: translateY(-5px);
+    }
+    .icon-spin {
+        animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+        100% { transform: rotate(360deg); }
+    }
+</style>
+
+<div class="container-fluid bg-light py-5 animate__animated animate__fadeIn">
+    <div class="container">
+        <h1 class="display-4 text-center mb-4 text-primary">Welcome to Our Stunning Homepage</h1>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <p class="lead text-center text-muted">
+                    Discover a world of innovation and creativity on our main page. Explore our cutting-edge services, stay updated with the latest trends, and embark on a journey of digital excellence.
+                </p>
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-primary btn-lg mr-3 rounded-pill gradient-shadow"><i class="fas fa-rocket mr-2 icon-spin"></i>Explore Services</a>
+                    <a href="#" class="btn btn-outline-secondary btn-lg rounded-pill gradient-shadow"><i class="fas fa-envelope mr-2"></i>Get in Touch</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 row-eq-height">
+            <div class="col-md-4 d-flex">
+                <div class="card gradient-shadow flex-fill">
+                    <div class="card-body text-center d-flex flex-column justify-content-center">
+                        <i class="fas fa-cog fa-3x mb-3 text-primary icon-spin"></i>
+                        <h3 class="card-title">Innovative Solutions</h3>
+                        <p class="card-text">Cutting-edge technology at your fingertips.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card gradient-shadow flex-fill">
+                    <div class="card-body text-center d-flex flex-column justify-content-center">
+                        <i class="fas fa-users fa-3x mb-3 text-success"></i>
+                        <h3 class="card-title">Expert Team</h3>
+                        <p class="card-text">Dedicated professionals ready to assist you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="card gradient-shadow flex-fill">
+                    <div class="card-body text-center d-flex flex-column justify-content-center">
+                        <i class="fas fa-chart-line fa-3x mb-3 text-info"></i>
+                        <h3 class="card-title">Growth Opportunities</h3>
+                        <p class="card-text">Unlock your potential with our services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm gradient-shadow animate__animated animate__fadeInLeft">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="fas fa-lightbulb mr-2 icon-spin"></i>Innovative Solutions</h5>
+                    <p class="card-text">Experience state-of-the-art technology tailored to meet your unique needs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm gradient-shadow animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="fas fa-users mr-2 icon-spin"></i>Expert Team</h5>
+                    <p class="card-text">Our skilled professionals are dedicated to delivering exceptional results.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm gradient-shadow animate__animated animate__fadeInRight">
+                <div class="card-body">
+                    <h5 class="card-title text-primary"><i class="fas fa-headset mr-2 icon-spin"></i>24/7 Support</h5>
+                    <p class="card-text">Count on our round-the-clock assistance to address your concerns promptly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-primary text-white py-4 mt-5 animate__animated animate__fadeIn">
+    <div class="container">
+        <h2 class="text-center mb-4 gradient-shadow">Stay Connected</h2>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <div class="input-group mb-3 gradient-shadow">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-light" type="button" id="button-addon2"><i class="fas fa-paper-plane mr-2"></i>Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+{% endblock %}
